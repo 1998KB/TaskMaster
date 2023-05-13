@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import "./App.css";
+import { Header } from "./components/Header/Header";
+import { StdLandingPage } from "./components/StdLandingPage/StdLandingPage";
+import { IconCardCarousel } from "./components/IconCardCarousel/IconCardCarousel";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import { AppContext } from "./context/AppContext";
+import { googleLogout } from "@react-oauth/google";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import { LandingPage } from "./pages/LandingPage/LandingPage";
+import Logo from "./images/logoLeft.png";
 
 function App() {
+  const navigate = useNavigate();
+  const { setProfile, profile, projects, setProjects, darkMode, setDarkMode } =
+    useContext(AppContext);
+
+  const logOut = () => {
+    googleLogout();
+    setProfile(undefined);
+    setProjects(undefined);
+    navigate("/");
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="chatBot-img-container">
+        <img src={Logo} alt="" className="chatboat-img" />
+      </div>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
     </div>
   );
 }

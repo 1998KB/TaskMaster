@@ -1,13 +1,28 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap%22");
+@import url("https://fonts.cdnfonts.com/css/charlie-2%22%22");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  --font-family-text: "Charlie Text", sans-serif;
+  --font-family-display: "Charlie Display", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-family: "Charlie ", sans-serif;
+}
+
+button,
+input {
+  overflow: visible;
 }

@@ -1,0 +1,60 @@
+.iconCard-container {
+  border-radius: 0.5rem;
+  box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+  color: inherit;
+  display: block;
+  min-height: 100px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none;
+  background-color: white;
+  user-select: none;
+  white-space: normal;
+  width: 250px;
+  margin: 1em 0 3em 0;
+}
+.iconCard-title {
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+.iconCard-paragraph {
+  line-height: 1.8em;
+  font-weight: 200;
+}
+
+.iconCard-image {
+  background-color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 8px;
+  height: 3rem;
+  left: 1rem;
+  position: absolute;
+  top: -1.5rem;
+  width: 3rem;
+}
+
+.iconCard-text {
+  padding: 2.25rem 1.5rem 1.5rem;
+  position: relative;
+}
+
+.iconCard-header {
+  height: 2rem;
+  background: rgb(255, 116, 82);
+}
+
+@media (min-width: 700px) {
+  .iconCard-container {
+    width: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  .iconCard-container {
+    width: 100%;
+  }
+}
